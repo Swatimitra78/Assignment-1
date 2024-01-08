@@ -5,7 +5,8 @@
   padding: 0;
   font-family: "Merriweather", serif;
 }
-body{
+
+body {
   overflow-x: hidden;
 }
 
@@ -50,7 +51,6 @@ h1 {
   font-size: 72px;
   font-weight: 900;
   line-height: 95px;
-  /* 131.944% */
   margin: 0 auto;
 }
 
@@ -154,7 +154,6 @@ h1 {
 .orange {
   color: #f00;
   text-align: center;
-  font-size: 32px;
   font-weight: 600;
   line-height: 56px;
   text-transform: capitalize;
@@ -250,8 +249,36 @@ h1 {
 }
 
 .holiyday .holiyday-text {
-  width: 48%;
+  display: flex;
+  width: 70%;
   text-align: center;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.holiday-headline {
+  color: #070211;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.holiyday .holiyday-text h2 {
+  font-size: 72px;
+}
+
+.holiyday .holiyday-text .holiyday-text-content {
+  color: rgba(7, 2, 17, 0.6);
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  width: 54%;
 }
 
 .discound-img {
@@ -280,7 +307,6 @@ h1 {
   right: 308px;
 }
 
-
 /* portfolio part start */
 
 .portfolio {
@@ -294,10 +320,9 @@ h1 {
 }
 
 .portfolio-text p {
-  color: #F00;
+  color: #f00;
   font-size: 24px;
   font-weight: 500;
-
 }
 
 .portfolio-text h3 {
@@ -309,7 +334,7 @@ h1 {
 }
 
 .portfolio-para p {
-  color: rgba(7, 2, 17, 0.60);
+  color: rgba(7, 2, 17, 0.6);
   font-size: 20px;
   font-weight: 400;
   line-height: 32px;
@@ -325,6 +350,22 @@ h1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
+
+.portfolio-img-item {
+  overflow: hidden;
+  
+}
+
+.portfolio-img-inner {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-img-item:hover .portfolio-img-inner {
+  transform: scale(1.1);
+  
 }
 
 /* letter start */
@@ -346,7 +387,6 @@ h1 {
 
 .letter-text h3 {
   color: #070211;
-
   font-size: 48px;
   font-weight: 900;
   text-transform: capitalize;
@@ -355,7 +395,7 @@ h1 {
 
 .letter-text p {
   width: 896px;
-  color: rgba(7, 2, 17, 0.60);
+  color: rgba(7, 2, 17, 0.6);
   font-size: 20px;
   font-weight: 400;
   line-height: 32px;
@@ -371,7 +411,6 @@ h1 {
   height: 72px;
   margin: 0 auto;
   margin-top: 20px;
-
 }
 
 .srch {
@@ -386,7 +425,7 @@ h1 {
 
 .btn {
   padding: 8px 16px;
-  background-color: #F00;
+  background-color: #f00;
   color: #fff;
   border: none;
   border-radius: 0px 50px 50px 0px;
@@ -394,10 +433,13 @@ h1 {
 }
 
 /* footer start */
-footer{
+footer {
   background: #070211;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 116px;
 }
-
 
 .footer {
   width: 1600px;
@@ -409,24 +451,37 @@ footer{
   justify-content: center;
   row-gap: 86px;
 }
-.footer-left { 
- display: flex;
+
+.footer-left {
+  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   width: 85%;
 }
+
+.footer-text p {
+  width: 390px;
+}
+
+.footer-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 20px;
+}
+
 .footer-icon-grp {
   display: flex;
-  color: #FFF;
+  color: #fff;
   font-family: Inter;
   font-size: 24px;
   font-style: normal;
-  font-weight: 500;
   line-height: 40px;
   flex-direction: column;
   row-gap: 20px;
 }
+
 .footer-img-grp {
   display: flex;
   flex-direction: row;
@@ -435,9 +490,10 @@ footer{
   width: 100%;
   column-gap: 33px;
 }
+
 .footer-text {
   width: 375px;
-  color: #FFF;
+  color: #fff;
   font-family: Inter;
   font-size: 24px;
   font-style: normal;
